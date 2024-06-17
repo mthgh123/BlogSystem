@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.2.5</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>com.CodeSY</groupId>
+    <artifactId>BlogSystem</artifactId>
+    <version>${blogsystem.version}</version>
+    <name>BlogSystem</name>
+    <description>BlogSystem</description>
+    <properties>
+        <blogsystem.version>1.0.0</blogsystem.version>
+    </properties>
+    <packaging>pom</packaging> <!--父模块必须定义pom打包方式-->
+    <!--module标签指定子模块，此处模块的顺序和最终编译模块的顺序一致，所以需要把更底层的模块放在更前面-->
+    <modules>
+        <module>model</module>
+        <module>util</module>
+        <module>common</module>
+        <module>dao</module>
+        <module>biz</module>
+        <module>web</module>
+        <module>boot</module>
+    </modules>
+</project>

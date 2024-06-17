@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.CodeSY</groupId>
+        <artifactId>BlogSystem</artifactId>
+        <version>${blogsystem.version}</version>
+    </parent>
+    <groupId>com.codesy.blogsystem</groupId>
+    <artifactId>boot</artifactId>
+    <version>${blogsystem.version}</version>
+    <name>boot</name>
+    <description>boot</description>
+    <dependencies>
+        <!--引入子模块依赖-->
+        <dependency>
+            <groupId>com.CodeSY</groupId>
+            <artifactId>web</artifactId>
+            <version>${blogsystem.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>
+                        com.codesy.blogsystem.boot.BootApplication
+                    </mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
